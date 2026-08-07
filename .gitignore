@@ -1,0 +1,10 @@
+# Python generator — not needed for the live site
+gen.py
+patch_lc.py
+
+# OS & editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+*.swp
