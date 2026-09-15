@@ -1,213 +1,1132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Asit Sengar &#8212; CS Student</title>
-  <meta name="description" content="Hi, I'm Asit Sengar. CS student who spends too much time on LeetCode and is slowly figuring out how computer vision works." />
-  <meta property="og:title" content="Asit Sengar &#8212; CS Student" />
-  <meta property="og:type" content="website" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet" />
-  <style>
-:root{--c-primary:#171717;--c-on-primary:#fff;--c-ink:#171717;--c-body:#4d4d4d;--c-mute:#888;--c-hairline:#ebebeb;--c-canvas:#fff;--c-canvas-soft:#fafafa;--c-canvas-soft-2:#f5f5f5;--c-link:#0070f3;--c-link-deep:#0761d1;--c-cyan:#50e3c2;--gd-s:#007cf0;--gd-e:#00dfd8;--gp-s:#7928ca;--gp-e:#ff0080;--gs-s:#ff4d4d;--gs-e:#f9cb28;--sp-xs:8px;--sp-sm:12px;--sp-md:16px;--sp-lg:24px;--sp-xl:32px;--sp-2xl:40px;--sp-3xl:48px;--sp-4xl:64px;--sp-5xl:96px;--sp-6xl:128px;--r-xs:4px;--r-sm:6px;--r-md:8px;--r-lg:12px;--r-xl:16px;--r-pill:100px;--r-full:9999px;--sh-card:0 0 0 1px rgba(0,0,0,.08) inset,0 1px 1px rgba(0,0,0,.03),0 2px 2px rgba(0,0,0,.04);--sh-md:0 0 0 1px rgba(0,0,0,.08) inset,0 2px 2px rgba(0,0,0,.04),0 8px 8px -8px rgba(0,0,0,.04);--sh-lg:0 0 0 1px rgba(0,0,0,.08) inset,0 2px 2px rgba(0,0,0,.04),0 8px 16px -4px rgba(0,0,0,.04)}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,-apple-system,sans-serif;font-feature-settings:"ss01","ss02";background:var(--c-canvas-soft);color:var(--c-ink);font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased}
-::selection{background:var(--c-primary);color:var(--c-on-primary)}
-.skip{position:absolute;top:-99px;left:var(--sp-md);padding:var(--sp-xs) var(--sp-md);background:var(--c-primary);color:var(--c-on-primary);border-radius:var(--r-sm);font-size:14px;font-weight:500;z-index:999;text-decoration:none;transition:top .2s}.skip:focus{top:var(--sp-md)}
-nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--c-hairline);height:64px;display:flex;align-items:center;padding:0 var(--sp-lg)}
-.nav-i{max-width:1200px;width:100%;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:var(--sp-lg)}
-.logo{font-size:14px;font-weight:600;color:var(--c-ink);letter-spacing:-.28px;text-decoration:none;display:flex;align-items:center;gap:var(--sp-xs)}
-.logo-dot{width:8px;height:8px;border-radius:var(--r-full);background:linear-gradient(135deg,var(--gd-s),var(--gp-e));display:inline-block}
-.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
-.nav-links a{color:var(--c-body);font-size:14px;font-weight:400;letter-spacing:-.28px;text-decoration:none;padding:var(--sp-xs) var(--sp-sm);border-radius:var(--r-full);transition:color .15s,background .15s}
-.nav-links a:hover{color:var(--c-ink);background:var(--c-canvas-soft-2)}
-.nav-links a:focus-visible,.logo:focus-visible{outline:2px solid var(--c-link);outline-offset:2px;border-radius:var(--r-sm)}
-.nav-cta{display:flex;align-items:center;gap:var(--sp-xs)}
-.btn-nav{height:28px;padding:0 var(--sp-xs);border-radius:var(--r-sm);font-size:14px;font-weight:500;letter-spacing:-.28px;text-decoration:none;display:inline-flex;align-items:center;border:1px solid var(--c-hairline);cursor:pointer;transition:opacity .15s,background .15s}
-.btn-nav:focus-visible{outline:2px solid var(--c-link);outline-offset:2px}
-.btn-np{background:var(--c-primary);color:var(--c-on-primary);border-color:transparent}.btn-np:hover{opacity:.85}
-.btn-ng{background:var(--c-canvas);color:var(--c-ink)}.btn-ng:hover{background:var(--c-canvas-soft-2)}
-.nav-hbg{display:none;background:none;border:1px solid var(--c-hairline);border-radius:var(--r-sm);width:32px;height:32px;align-items:center;justify-content:center;cursor:pointer;color:var(--c-ink)}
-.nav-hbg:focus-visible{outline:2px solid var(--c-link);outline-offset:2px}
-.hero{position:relative;overflow:hidden;padding:var(--sp-6xl) var(--sp-lg);background:var(--c-canvas);text-align:center}
-.hero-mesh{position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(0,124,240,.18) 0%,rgba(0,223,216,.1) 30%,rgba(121,40,202,.08) 55%,rgba(255,0,128,.05) 75%,transparent 100%);animation:mesh 8s ease-in-out infinite alternate}
-@keyframes mesh{0%{opacity:.7;transform:scale(1)}100%{opacity:1;transform:scale(1.04)}}
-@media(prefers-reduced-motion:reduce){.hero-mesh,.blink,.fu{animation:none!important;transition:none!important}}
-.hero-inner{position:relative;z-index:1;max-width:760px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:var(--sp-lg)}
-.badge{display:inline-flex;align-items:center;gap:var(--sp-xs);background:var(--c-canvas-soft);color:var(--c-body);font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;padding:var(--sp-xs) var(--sp-sm);border-radius:var(--r-full);border:1px solid var(--c-hairline)}
-.badge-dot{width:6px;height:6px;border-radius:var(--r-full);background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.2);animation:blink 2s ease-in-out infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
-h1{font-size:clamp(32px,5vw,52px);font-weight:600;line-height:1.05;letter-spacing:-2.4px;color:var(--c-ink);text-wrap:balance}
-.grad{background:linear-gradient(90deg,var(--gd-s),var(--gp-e),var(--gs-s));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-sub{font-size:18px;font-weight:400;line-height:28px;color:var(--c-body);max-width:540px;text-wrap:pretty}
-.cta-row{display:flex;align-items:center;gap:var(--sp-sm);flex-wrap:wrap;justify-content:center}
-.btn-p{height:48px;padding:0 var(--sp-xl);background:var(--c-primary);color:var(--c-on-primary);border-radius:var(--r-pill);font-size:16px;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:var(--sp-xs);border:none;cursor:pointer;transition:opacity .15s,transform .15s}
-.btn-p:hover{opacity:.85;transform:translateY(-1px)}.btn-p:active{transform:none}.btn-p:focus-visible{outline:2px solid var(--c-link);outline-offset:2px}
-.btn-s{height:48px;padding:0 var(--sp-xl);background:var(--c-canvas);color:var(--c-ink);border-radius:var(--r-pill);font-size:16px;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:var(--sp-xs);border:1px solid var(--c-hairline);cursor:pointer;transition:background .15s,transform .15s;box-shadow:var(--sh-card)}
-.btn-s:hover{background:var(--c-canvas-soft-2);transform:translateY(-1px)}.btn-s:active{transform:none}.btn-s:focus-visible{outline:2px solid var(--c-link);outline-offset:2px}
-section{padding:var(--sp-5xl) var(--sp-lg)}
-.s-soft{background:var(--c-canvas-soft)}.s-white{background:var(--c-canvas)}.s-dark{background:var(--c-primary);color:var(--c-on-primary)}
-.container{max-width:1200px;margin:0 auto}
-.eyebrow{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;line-height:16px;color:var(--c-mute);margin-bottom:var(--sp-sm)}
-.s-dark .eyebrow{color:rgba(255,255,255,.4)}
-h2{font-size:32px;font-weight:600;line-height:40px;letter-spacing:-1.28px;color:var(--c-ink);margin-bottom:var(--sp-md);text-wrap:balance}
-.s-dark h2{color:var(--c-on-primary)}
-.lead{font-size:18px;font-weight:400;line-height:28px;color:var(--c-body);max-width:560px;text-wrap:pretty}
-.s-dark .lead{color:rgba(255,255,255,.6)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-4xl);align-items:center}
-.avatar{width:220px;height:220px;border-radius:var(--r-xl);background:linear-gradient(135deg,var(--gd-s) 0%,var(--gp-e) 50%,var(--gs-e) 100%);display:flex;align-items:center;justify-content:center;font-size:72px;box-shadow:var(--sh-lg);flex-shrink:0}
-.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--sp-md);margin-top:var(--sp-xl)}
-.stat{background:var(--c-canvas);border-radius:var(--r-md);padding:var(--sp-md) var(--sp-lg);box-shadow:var(--sh-card)}
-.stat-n{font-size:24px;font-weight:600;letter-spacing:-.96px;color:var(--c-ink)}
-.stat-l{font-size:12px;color:var(--c-mute);margin-top:4px;font-family:"JetBrains Mono",ui-monospace,monospace}
-.terminal{background:var(--c-primary);border-radius:var(--r-md);padding:var(--sp-lg);font-family:"JetBrains Mono",ui-monospace,monospace;font-size:13px;line-height:20px;color:rgba(255,255,255,.85);box-shadow:var(--sh-lg);overflow-x:auto}
-.term-bar{display:flex;gap:var(--sp-xs);margin-bottom:var(--sp-md)}
-.td{width:12px;height:12px;border-radius:var(--r-full)}.td-r{background:#ff5f57}.td-a{background:#febc2e}.td-g{background:#28c840}
-.t-p{color:#50e3c2}.t-s{color:#c3e88d}.t-c{color:rgba(255,255,255,.35)}
-.sk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-md);margin-top:var(--sp-2xl)}
-.sk-card{background:var(--c-canvas);border-radius:var(--r-md);padding:var(--sp-lg);box-shadow:var(--sh-md);transition:transform .2s,box-shadow .2s}
-.sk-card:hover{transform:translateY(-2px);box-shadow:var(--sh-lg)}
-.sk-icon{font-size:28px;margin-bottom:var(--sp-sm);line-height:1}
-.sk-name{font-size:16px;font-weight:500;color:var(--c-ink);margin-bottom:var(--sp-xs)}
-.sk-desc{font-size:14px;color:var(--c-body);line-height:20px;letter-spacing:-.28px}
-.tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:var(--sp-sm)}
-.tag{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11px;background:var(--c-canvas-soft);color:var(--c-mute);padding:2px var(--sp-xs);border-radius:var(--r-full);border:1px solid var(--c-hairline)}
-.pr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-md);margin-top:var(--sp-2xl)}
-.pr-card{background:var(--c-canvas);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-md);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
-.pr-card:hover{transform:translateY(-3px);box-shadow:var(--sh-lg)}
-.pr-head{height:160px;display:flex;align-items:center;justify-content:center;font-size:48px}
-.ph-develop{background:linear-gradient(135deg,var(--gd-s),var(--gd-e))}
-.ph-preview{background:linear-gradient(135deg,var(--gp-s),var(--gp-e))}
-.ph-ship{background:linear-gradient(135deg,var(--gs-s),var(--gs-e))}
-.ph-dark{background:var(--c-primary)}
-.ph-soft{background:linear-gradient(135deg,#007cf0,#7928ca)}
-.ph-mix{background:linear-gradient(135deg,#00dfd8,#f9cb28)}
-.pr-body{padding:var(--sp-lg);flex:1;display:flex;flex-direction:column;gap:var(--sp-xs)}
-.pr-status{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11px;color:var(--c-mute)}
-.pr-name{font-size:20px;font-weight:600;letter-spacing:-.6px;color:var(--c-ink)}
-.pr-desc{font-size:14px;color:var(--c-body);line-height:20px;letter-spacing:-.28px;flex:1}
-.pr-foot{display:flex;align-items:center;justify-content:space-between;padding:var(--sp-md) var(--sp-lg);border-top:1px solid var(--c-hairline)}
-.pr-link{font-size:14px;font-weight:500;color:var(--c-link);text-decoration:none;display:inline-flex;align-items:center;gap:4px;letter-spacing:-.28px}
-.pr-link:hover{color:var(--c-link-deep);text-decoration:underline}.pr-link:focus-visible{outline:2px solid var(--c-link);outline-offset:2px;border-radius:2px}
-.edu-list{margin-top:var(--sp-2xl);display:flex;flex-direction:column}
-.edu-item{display:grid;grid-template-columns:220px 1fr;gap:var(--sp-xl);padding:var(--sp-xl) 0;border-top:1px solid rgba(255,255,255,.1)}
-.edu-item:first-child{border-top:none}
-.edu-co{font-size:14px;font-weight:500;color:rgba(255,255,255,.9);letter-spacing:-.28px}
-.edu-per{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;color:rgba(255,255,255,.4);margin-top:4px}
-.edu-title{font-size:20px;font-weight:600;letter-spacing:-.6px;color:var(--c-on-primary);margin-bottom:var(--sp-xs)}
-.edu-body{font-size:14px;color:rgba(255,255,255,.6);line-height:20px;letter-spacing:-.28px}
-.edu-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:var(--sp-sm)}
-.etag{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.5);padding:2px 8px;border-radius:var(--r-full);border:1px solid rgba(255,255,255,.12)}
-.tl-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-md);margin-top:var(--sp-2xl)}
-.tl-card{background:var(--c-canvas);border-radius:var(--r-md);padding:var(--sp-md) var(--sp-lg);box-shadow:var(--sh-card);display:flex;align-items:center;gap:var(--sp-sm);transition:transform .15s}
-.tl-card:hover{transform:translateY(-1px)}
-.tl-icon{font-size:22px;flex-shrink:0}
-.tl-name{font-size:14px;font-weight:500;color:var(--c-ink);letter-spacing:-.28px}
-.tl-lvl{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11px;color:var(--c-mute)}
-.ct-section{position:relative;overflow:hidden}
-.ct-mesh{position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 70% 50% at 50% 50%,rgba(0,124,240,.12) 0%,rgba(255,0,128,.08) 60%,transparent 100%)}
-.ct-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--sp-lg)}
-.ct-links{display:flex;align-items:center;gap:var(--sp-md);flex-wrap:wrap;justify-content:center;margin-top:var(--sp-xl)}
-.ct-link{display:inline-flex;align-items:center;gap:var(--sp-xs);height:40px;padding:0 var(--sp-md);border-radius:var(--r-pill);font-size:14px;font-weight:500;text-decoration:none;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.75);background:rgba(255,255,255,.05);transition:background .15s,color .15s,border-color .15s;letter-spacing:-.28px}
-.ct-link:hover{background:rgba(255,255,255,.12);color:var(--c-on-primary);border-color:rgba(255,255,255,.25)}.ct-link:focus-visible{outline:2px solid var(--c-link);outline-offset:2px}
-.ct-gh{background:var(--c-on-primary);color:var(--c-primary);border-color:transparent}.ct-gh:hover{background:var(--c-canvas-soft);color:var(--c-primary)}
-footer{padding:var(--sp-4xl) var(--sp-lg);background:var(--c-canvas);border-top:1px solid var(--c-hairline)}
-.foot-i{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--sp-md)}
-.foot-copy{font-size:12px;color:var(--c-mute)}
-.foot-links{display:flex;gap:var(--sp-md);list-style:none}
-.foot-links a{font-size:12px;color:var(--c-mute);text-decoration:none}.foot-links a:hover{color:var(--c-body)}.foot-links a:focus-visible{outline:2px solid var(--c-link);outline-offset:2px;border-radius:2px}
-hr.div{max-width:1200px;margin:0 auto;border:none;border-top:1px solid var(--c-hairline)}
-@media(max-width:960px){.sk-grid,.pr-grid{grid-template-columns:repeat(2,1fr)}.tl-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:768px){.about-grid,.edu-item{grid-template-columns:1fr}.edu-item{gap:var(--sp-xs)}.nav-links,.btn-ng{display:none}.nav-hbg{display:flex}}
-@media(max-width:600px){.hero,section{padding:var(--sp-4xl) var(--sp-md)}.sk-grid,.pr-grid{grid-template-columns:1fr}.tl-grid{grid-template-columns:repeat(2,1fr)}h2{font-size:24px;letter-spacing:-.96px}h1{letter-spacing:-1.6px}.stats{grid-template-columns:1fr 1fr}}
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asit Sengar &#8212; CS Student</title>
+    <meta
+      name="description"
+      content="Hi, I'm Asit Sengar. CS student who spends too much time on LeetCode and is slowly figuring out how computer vision works."
+    />
+    <meta property="og:title" content="Asit Sengar &#8212; CS Student" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --c-primary: #171717;
+        --c-on-primary: #fff;
+        --c-ink: #171717;
+        --c-body: #4d4d4d;
+        --c-mute: #888;
+        --c-hairline: #ebebeb;
+        --c-canvas: #fff;
+        --c-canvas-soft: #fafafa;
+        --c-canvas-soft-2: #f5f5f5;
+        --c-link: #0070f3;
+        --c-link-deep: #0761d1;
+        --c-cyan: #50e3c2;
+        --gd-s: #007cf0;
+        --gd-e: #00dfd8;
+        --gp-s: #7928ca;
+        --gp-e: #ff0080;
+        --gs-s: #ff4d4d;
+        --gs-e: #f9cb28;
+        --sp-xs: 8px;
+        --sp-sm: 12px;
+        --sp-md: 16px;
+        --sp-lg: 24px;
+        --sp-xl: 32px;
+        --sp-2xl: 40px;
+        --sp-3xl: 48px;
+        --sp-4xl: 64px;
+        --sp-5xl: 96px;
+        --sp-6xl: 128px;
+        --r-xs: 4px;
+        --r-sm: 6px;
+        --r-md: 8px;
+        --r-lg: 12px;
+        --r-xl: 16px;
+        --r-pill: 100px;
+        --r-full: 9999px;
+        --sh-card:
+          0 0 0 1px rgba(0, 0, 0, 0.08) inset, 0 1px 1px rgba(0, 0, 0, 0.03),
+          0 2px 2px rgba(0, 0, 0, 0.04);
+        --sh-md:
+          0 0 0 1px rgba(0, 0, 0, 0.08) inset, 0 2px 2px rgba(0, 0, 0, 0.04),
+          0 8px 8px -8px rgba(0, 0, 0, 0.04);
+        --sh-lg:
+          0 0 0 1px rgba(0, 0, 0, 0.08) inset, 0 2px 2px rgba(0, 0, 0, 0.04),
+          0 8px 16px -4px rgba(0, 0, 0, 0.04);
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family:
+          Inter,
+          system-ui,
+          -apple-system,
+          sans-serif;
+        font-feature-settings: "ss01", "ss02";
+        background: var(--c-canvas-soft);
+        color: var(--c-ink);
+        font-size: 16px;
+        line-height: 24px;
+        -webkit-font-smoothing: antialiased;
+      }
+      ::selection {
+        background: var(--c-primary);
+        color: var(--c-on-primary);
+      }
+      .skip {
+        position: absolute;
+        top: -99px;
+        left: var(--sp-md);
+        padding: var(--sp-xs) var(--sp-md);
+        background: var(--c-primary);
+        color: var(--c-on-primary);
+        border-radius: var(--r-sm);
+        font-size: 14px;
+        font-weight: 500;
+        z-index: 999;
+        text-decoration: none;
+        transition: top 0.2s;
+      }
+      .skip:focus {
+        top: var(--sp-md);
+      }
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--c-hairline);
+        height: 64px;
+        display: flex;
+        align-items: center;
+        padding: 0 var(--sp-lg);
+      }
+      .nav-i {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--sp-lg);
+      }
+      .logo {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--c-ink);
+        letter-spacing: -0.28px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: var(--sp-xs);
+      }
+      .logo-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: var(--r-full);
+        background: linear-gradient(135deg, var(--gd-s), var(--gp-e));
+        display: inline-block;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        list-style: none;
+      }
+      .nav-links a {
+        color: var(--c-body);
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: -0.28px;
+        text-decoration: none;
+        padding: var(--sp-xs) var(--sp-sm);
+        border-radius: var(--r-full);
+        transition:
+          color 0.15s,
+          background 0.15s;
+      }
+      .nav-links a:hover {
+        color: var(--c-ink);
+        background: var(--c-canvas-soft-2);
+      }
+      .nav-links a:focus-visible,
+      .logo:focus-visible {
+        outline: 2px solid var(--c-link);
+        outline-offset: 2px;
+        border-radius: var(--r-sm);
+      }
+      .nav-cta {
+        display: flex;
+        align-items: center;
+        gap: var(--sp-xs);
+      }
+      .btn-nav {
+        height: 28px;
+        padding: 0 var(--sp-xs);
+        border-radius: var(--r-sm);
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -0.28px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid var(--c-hairline);
+        cursor: pointer;
+        transition:
+          opacity 0.15s,
+          background 0.15s;
+      }
+      .btn-nav:focus-visible {
+        outline: 2px solid var(--c-link);
+        outline-offset: 2px;
+      }
+      .btn-np {
+        background: var(--c-primary);
+        color: var(--c-on-primary);
+        border-color: transparent;
+      }
+      .btn-np:hover {
+        opacity: 0.85;
+      }
+      .btn-ng {
+        background: var(--c-canvas);
+        color: var(--c-ink);
+      }
+      .btn-ng:hover {
+        background: var(--c-canvas-soft-2);
+      }
+      .nav-hbg {
+        display: none;
+        background: none;
+        border: 1px solid var(--c-hairline);
+        border-radius: var(--r-sm);
+        width: 32px;
+        height: 32px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: var(--c-ink);
+      }
+      .nav-hbg:focus-visible {
+        outline: 2px solid var(--c-link);
+        outline-offset: 2px;
+      }
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: var(--sp-6xl) var(--sp-lg);
+        background: var(--c-canvas);
+        text-align: center;
+      }
+      .hero-mesh {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background: radial-gradient(
+          ellipse 80% 60% at 50% -10%,
+          rgba(0, 124, 240, 0.18) 0%,
+          rgba(0, 223, 216, 0.1) 30%,
+          rgba(121, 40, 202, 0.08) 55%,
+          rgba(255, 0, 128, 0.05) 75%,
+          transparent 100%
+        );
+        animation: mesh 8s ease-in-out infinite alternate;
+      }
+      @keyframes mesh {
+        0% {
+          opacity: 0.7;
+          transform: scale(1);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1.04);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .hero-mesh,
+        .blink,
+        .fu {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+        max-width: 760px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--sp-lg);
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--sp-xs);
+        background: var(--c-canvas-soft);
+        color: var(--c-body);
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 12px;
+        padding: var(--sp-xs) var(--sp-sm);
+        border-radius: var(--r-full);
+        border: 1px solid var(--c-hairline);
+      }
+      .badge-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: var(--r-full);
+        background: #22c55e;
+        box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+        animation: blink 2s ease-in-out infinite;
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.4;
+        }
+      }
+      h1 {
+        font-size: clamp(32px, 5vw, 52px);
+        font-weight: 600;
+        line-height: 1.05;
+        letter-spacing: -2.4px;
+        color: var(--c-ink);
+        text-wrap: balance;
+      }
+      .grad {
+        background: linear-gradient(
+          90deg,
+          var(--gd-s),
+          var(--gp-e),
+          var(--gs-s)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .hero-sub {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        color: var(--c-body);
+        max-width: 540px;
+        text-wrap: pretty;
+      }
+      .cta-row {
+        display: flex;
+        align-items: center;
+        gap: var(--sp-sm);
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .btn-p {
+        height: 48px;
+        padding: 0 var(--sp-xl);
+        background: var(--c-primary);
+        color: var(--c-on-primary);
+        border-radius: var(--r-pill);
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: var(--sp-xs);
+        border: none;
+        cursor: pointer;
+        transition:
+          opacity 0.15s,
+          transform 0.15s;
+      }
+      .btn-p:hover {
+        opacity: 0.85;
+        transform: translateY(-1px);
+      }
+      .btn-p:active {
+        transform: none;
+      }
+      .btn-p:focus-visible {
+        outline: 2px solid var(--c-link);
+        outline-offset: 2px;
+      }
+      .btn-s {
+        height: 48px;
+        padding: 0 var(--sp-xl);
+        background: var(--c-canvas);
+        color: var(--c-ink);
+        border-radius: var(--r-pill);
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: var(--sp-xs);
+        border: 1px solid var(--c-hairline);
+        cursor: pointer;
+        transition:
+          background 0.15s,
+          transform 0.15s;
+        box-shadow: var(--sh-card);
+      }
+      .btn-s:hover {
+        background: var(--c-canvas-soft-2);
+        transform: translateY(-1px);
+      }
+      .btn-s:active {
+        transform: none;
+      }
+      .btn-s:focus-visible {
+        outline: 2px solid var(--c-link);
+        outline-offset: 2px;
+      }
+      section {
+        padding: var(--sp-5xl) var(--sp-lg);
+      }
+      .s-soft {
+        background: var(--c-canvas-soft);
+      }
+      .s-white {
+        background: var(--c-canvas);
+      }
+      .s-dark {
+        background: var(--c-primary);
+        color: var(--c-on-primary);
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .eyebrow {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 12px;
+        line-height: 16px;
+        color: var(--c-mute);
+        margin-bottom: var(--sp-sm);
+      }
+      .s-dark .eyebrow {
+        color: rgba(255, 255, 255, 0.4);
+      }
+      h2 {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 40px;
+        letter-spacing: -1.28px;
+        color: var(--c-ink);
+        margin-bottom: var(--sp-md);
+        text-wrap: balance;
+      }
+      .s-dark h2 {
+        color: var(--c-on-primary);
+      }
+      .lead {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        color: var(--c-body);
+        max-width: 560px;
+        text-wrap: pretty;
+      }
+      .s-dark .lead {
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--sp-4xl);
+        align-items: center;
+      }
+      .avatar {
+        width: 220px;
+        height: 220px;
+        border-radius: var(--r-xl);
+        background: linear-gradient(
+          135deg,
+          var(--gd-s) 0%,
+          var(--gp-e) 50%,
+          var(--gs-e) 100%
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 72px;
+        box-shadow: var(--sh-lg);
+        flex-shrink: 0;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--sp-md);
+        margin-top: var(--sp-xl);
+      }
+      .stat {
+        background: var(--c-canvas);
+        border-radius: var(--r-md);
+        padding: var(--sp-md) var(--sp-lg);
+        box-shadow: var(--sh-card);
+      }
+      .stat-n {
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: -0.96px;
+        color: var(--c-ink);
+      }
+      .stat-l {
+        font-size: 12px;
+        color: var(--c-mute);
+        margin-top: 4px;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+      }
+      .terminal {
+        background: var(--c-primary);
+        border-radius: var(--r-md);
+        padding: var(--sp-lg);
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 13px;
+        line-height: 20px;
+        color: rgba(255, 255, 255, 0.85);
+        box-shadow: var(--sh-lg);
+        overflow-x: auto;
+      }
+      .term-bar {
+        display: flex;
+        gap: var(--sp-xs);
+        margin-bottom: var(--sp-md);
+      }
+      .td {
+        width: 12px;
+        height: 12px;
+        border-radius: var(--r-full);
+      }
+      .td-r {
+        background: #ff5f57;
+      }
+      .td-a {
+        background: #febc2e;
+      }
+      .td-g {
+        background: #28c840;
+      }
+      .t-p {
+        color: #50e3c2;
+      }
+      .t-s {
+        color: #c3e88d;
+      }
+      .t-c {
+        color: rgba(255, 255, 255, 0.35);
+      }
+      .sk-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--sp-md);
+        margin-top: var(--sp-2xl);
+      }
+      .sk-card {
+        background: var(--c-canvas);
+        border-radius: var(--r-md);
+        padding: var(--sp-lg);
+        box-shadow: var(--sh-md);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .sk-card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--sh-lg);
+      }
+      .sk-icon {
+        font-size: 28px;
+        margin-bottom: var(--sp-sm);
+        line-height: 1;
+      }
+      .sk-name {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--c-ink);
+        margin-bottom: var(--sp-xs);
+      }
+      .sk-desc {
+        font-size: 14px;
+        color: var(--c-body);
+        line-height: 20px;
+        letter-spacing: -0.28px;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-top: var(--sp-sm);
+      }
+      .tag {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 11px;
+        background: var(--c-canvas-soft);
+        color: var(--c-mute);
+        padding: 2px var(--sp-xs);
+        border-radius: var(--r-full);
+        border: 1px solid var(--c-hairline);
+      }
+      .pr-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--sp-md);
+        margin-top: var(--sp-2xl);
+      }
+      .pr-card {
+        background: var(--c-canvas);
+        border-radius: var(--r-lg);
+        overflow: hidden;
+        box-shadow: var(--sh-md);
+        display: flex;
+        flex-direction: column;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .pr-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--sh-lg);
+      }
+      .pr-head {
+        height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+      }
+      .ph-develop {
+        background: linear-gradient(135deg, var(--gd-s), var(--gd-e));
+      }
+      .ph-preview {
+        background: linear-gradient(135deg, var(--gp-s), var(--gp-e));
+      }
+      .ph-ship {
+        background: linear-gradient(135deg, var(--gs-s), var(--gs-e));
+      }
+      .ph-dark {
+        background: var(--c-primary);
+      }
+      .ph-soft {
+        background: linear-gradient(135deg, #007cf0, #7928ca);
+      }
+      .ph-mix {
+        background: linear-gradient(135deg, #00dfd8, #f9cb28);
+      }
+      .pr-body {
+        padding: var(--sp-lg);
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: var(--sp-xs);
+      }
+      .pr-status {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 11px;
+        color: var(--c-mute);
+      }
+      .pr-name {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -0.6px;
+        color: var(--c-ink);
+      }
+      .pr-desc {
+        font-size: 14px;
+        color: var(--c-body);
+        line-height: 20px;
+        letter-spacing: -0.28px;
+        flex: 1;
+      }
+      .pr-foot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--sp-md) var(--sp-lg);
+        border-top: 1px solid var(--c-hairline);
+      }
+      .pr-link {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--c-link);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        letter-spacing: -0.28px;
+      }
+      .pr-link:hover {
+        color: var(--c-link-deep);
+        text-decoration: underline;
+      }
+      .pr-link:focus-visible {
+        outline: 2px solid var(--c-link);
+        outline-offset: 2px;
+        border-radius: 2px;
+      }
+      .edu-list {
+        margin-top: var(--sp-2xl);
+        display: flex;
+        flex-direction: column;
+      }
+      .edu-item {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: var(--sp-xl);
+        padding: var(--sp-xl) 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .edu-item:first-child {
+        border-top: none;
+      }
+      .edu-co {
+        font-size: 14px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.9);
+        letter-spacing: -0.28px;
+      }
+      .edu-per {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.4);
+        margin-top: 4px;
+      }
+      .edu-title {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -0.6px;
+        color: var(--c-on-primary);
+        margin-bottom: var(--sp-xs);
+      }
+      .edu-body {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 20px;
+        letter-spacing: -0.28px;
+      }
+      .edu-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-top: var(--sp-sm);
+      }
+      .etag {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 11px;
+        background: rgba(255, 255, 255, 0.08);
+        color: rgba(255, 255, 255, 0.5);
+        padding: 2px 8px;
+        border-radius: var(--r-full);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .tl-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--sp-md);
+        margin-top: var(--sp-2xl);
+      }
+      .tl-card {
+        background: var(--c-canvas);
+        border-radius: var(--r-md);
+        padding: var(--sp-md) var(--sp-lg);
+        box-shadow: var(--sh-card);
+        display: flex;
+        align-items: center;
+        gap: var(--sp-sm);
+        transition: transform 0.15s;
+      }
+      .tl-card:hover {
+        transform: translateY(-1px);
+      }
+      .tl-icon {
+        font-size: 22px;
+        flex-shrink: 0;
+      }
+      .tl-name {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--c-ink);
+        letter-spacing: -0.28px;
+      }
+      .tl-lvl {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 11px;
+        color: var(--c-mute);
+      }
+      .ct-section {
+        position: relative;
+        overflow: hidden;
+      }
+      .ct-mesh {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background: radial-gradient(
+          ellipse 70% 50% at 50% 50%,
+          rgba(0, 124, 240, 0.12) 0%,
+          rgba(255, 0, 128, 0.08) 60%,
+          transparent 100%
+        );
+      }
+      .ct-inner {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--sp-lg);
+      }
+      .ct-links {
+        display: flex;
+        align-items: center;
+        gap: var(--sp-md);
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: var(--sp-xl);
+      }
+      .ct-link {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--sp-xs);
+        height: 40px;
+        padding: 0 var(--sp-md);
+        border-radius: var(--r-pill);
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: rgba(255, 255, 255, 0.75);
+        background: rgba(255, 255, 255, 0.05);
+        transition:
+          background 0.15s,
+          color 0.15s,
+          border-color 0.15s;
+        letter-spacing: -0.28px;
+      }
+      .ct-link:hover {
+        background: rgba(255, 255, 255, 0.12);
+        color: var(--c-on-primary);
+        border-color: rgba(255, 255, 255, 0.25);
+      }
+      .ct-link:focus-visible {
+        outline: 2px solid var(--c-link);
+        outline-offset: 2px;
+      }
+      .ct-gh {
+        background: var(--c-on-primary);
+        color: var(--c-primary);
+        border-color: transparent;
+      }
+      .ct-gh:hover {
+        background: var(--c-canvas-soft);
+        color: var(--c-primary);
+      }
+      footer {
+        padding: var(--sp-4xl) var(--sp-lg);
+        background: var(--c-canvas);
+        border-top: 1px solid var(--c-hairline);
+      }
+      .foot-i {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: var(--sp-md);
+      }
+      .foot-copy {
+        font-size: 12px;
+        color: var(--c-mute);
+      }
+      .foot-links {
+        display: flex;
+        gap: var(--sp-md);
+        list-style: none;
+      }
+      .foot-links a {
+        font-size: 12px;
+        color: var(--c-mute);
+        text-decoration: none;
+      }
+      .foot-links a:hover {
+        color: var(--c-body);
+      }
+      .foot-links a:focus-visible {
+        outline: 2px solid var(--c-link);
+        outline-offset: 2px;
+        border-radius: 2px;
+      }
+      hr.div {
+        max-width: 1200px;
+        margin: 0 auto;
+        border: none;
+        border-top: 1px solid var(--c-hairline);
+      }
+      @media (max-width: 960px) {
+        .sk-grid,
+        .pr-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .tl-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 768px) {
+        .about-grid,
+        .edu-item {
+          grid-template-columns: 1fr;
+        }
+        .edu-item {
+          gap: var(--sp-xs);
+        }
+        .nav-links,
+        .btn-ng {
+          display: none;
+        }
+        .nav-hbg {
+          display: flex;
+        }
+      }
+      @media (max-width: 600px) {
+        .hero,
+        section {
+          padding: var(--sp-4xl) var(--sp-md);
+        }
+        .sk-grid,
+        .pr-grid {
+          grid-template-columns: 1fr;
+        }
+        .tl-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        h2 {
+          font-size: 24px;
+          letter-spacing: -0.96px;
+        }
+        h1 {
+          letter-spacing: -1.6px;
+        }
+        .stats {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .cinejoy-glow {
+        position: relative;
+        overflow: hidden;
+      }
 
-<a href="#main" class="skip">Skip to main content</a>
+      .cinejoy-glow::before {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 300px;
+        background: radial-gradient(
+          circle,
+          rgba(149, 255, 80, 0.25) 0%,
+          rgba(95, 184, 44, 0.12) 40%,
+          transparent 70%
+        );
+        filter: blur(30px);
+        top: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+        pointer-events: none;
+      }
 
-<header role="banner">
-  <nav aria-label="Main navigation">
-    <div class="nav-i">
-      <a href="#" class="logo" aria-label="Asit Sengar home">
-        <span class="logo-dot" aria-hidden="true"></span>
-        asit.dev
-      </a>
-      <ul class="nav-links" role="list">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="nav-cta">
-        <a href="https://github.com/Asit-Sengar" class="btn-nav btn-ng" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
-        <a href="#contact" class="btn-nav btn-np">Get in touch</a>
-        <button class="nav-hbg" aria-label="Open navigation menu" aria-expanded="false" id="nav-hbg">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </nav>
-</header>
+      .cinejoy-glow > * {
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip">Skip to main content</a>
 
-<main id="main">
-
-<section class="hero" aria-label="Introduction">
-  <div class="hero-mesh" aria-hidden="true"></div>
-  <div class="hero-inner">
-    <div class="badge" role="status" aria-live="polite">
-      <span class="badge-dot" aria-hidden="true"></span>
-      open to internships
-    </div>
-    <h1>CS student.<br/>Learning to make <span class="grad">computers see.</span></h1>
-    <p class="hero-sub">I&#8217;m Asit. I study CS, grind DSA problems, and I&#8217;m currently going down the computer vision rabbit hole. Still figuring a lot out, but I enjoy the process.</p>
-    <div class="cta-row">
-      <a href="#projects" class="btn-p">View my projects</a>
-      <a href="https://github.com/Asit-Sengar" class="btn-s" target="_blank" rel="noopener noreferrer" aria-label="View GitHub profile, opens in new tab">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-        GitHub
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="s-soft" id="about" aria-labelledby="h-about">
-  <div class="container">
-    <div class="about-grid">
-      <div style="display:flex;justify-content:center">
-        <div class="avatar" role="img" aria-label="Asit Sengar avatar illustration">&#128064;</div>
-      </div>
-      <div>
-        <h2 id="h-about">Still learning. But that&#8217;s kind of the point.</h2>
-        <p class="lead">I study Computer Science and spend most of my time on two things: DSA and machine learning. Lately I&#8217;ve been getting into computer vision &#8212; there&#8217;s something genuinely cool about writing code that can look at an image and understand what&#8217;s in it.</p>
-        <p class="lead" style="margin-top:var(--sp-md)">I&#8217;m not going to pretend I have everything figured out. I have gaps, I look things up constantly, and half my code doesn&#8217;t work the first time. But I show up every day and that&#8217;s what matters to me right now.</p>
-        <div class="stats" aria-label="Current focus areas">
-          <div class="stat"><div class="stat-n">DSA</div><div class="stat-l">daily grind</div></div>
-          <div class="stat"><div class="stat-n">ML</div><div class="stat-l">learning</div></div>
-          <div class="stat"><div class="stat-n">CV</div><div class="stat-l">my goal</div></div>
-          <div class="stat"><div class="stat-n">OSS</div><div class="stat-l">exploring</div></div>
+    <header role="banner">
+      <nav aria-label="Main navigation">
+        <div class="nav-i">
+          <a href="#" class="logo" aria-label="Asit Sengar home">
+            <span class="logo-dot" aria-hidden="true"></span>
+            asit.dev
+          </a>
+          <ul class="nav-links" role="list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="nav-cta">
+            <a
+              href="https://github.com/Asit-Sengar"
+              class="btn-nav btn-ng"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub profile"
+              >GitHub</a
+            >
+            <a href="#contact" class="btn-nav btn-np">Get in touch</a>
+            <button
+              class="nav-hbg"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              id="nav-hbg"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M2 4h12M2 8h12M2 12h12"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </nav>
+    </header>
 
-<hr class="div" aria-hidden="true"/>
+    <main id="main">
+      <section class="hero cinejoy-glow" aria-label="Introduction">
+        <div class="hero-mesh" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <div class="badge" role="status" aria-live="polite">
+            <span class="badge-dot" aria-hidden="true"></span>
+            open to internships
+          </div>
+          <h1>
+            CS student.<br />Learning to make
+            <span class="grad">computers see.</span>
+          </h1>
+          <p class="hero-sub">
+            I&#8217;m Asit. I study CS, grind DSA problems, and I&#8217;m
+            currently going down the computer vision rabbit hole. Still figuring
+            a lot out, but I enjoy the process.
+          </p>
+          <div class="cta-row">
+            <a href="#projects" class="btn-p">View my projects</a>
+            <a
+              href="https://github.com/Asit-Sengar"
+              class="btn-s"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View GitHub profile, opens in new tab"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </section>
 
-<section class="s-white" aria-labelledby="h-stack">
-  <div class="container">
-    <h2 id="h-stack">What I&#8217;m currently working through.</h2>
-    <div class="terminal" aria-label="Current learning focus displayed as JSON code">
-      <div class="term-bar" aria-hidden="true">
-        <div class="td td-r"></div><div class="td td-a"></div><div class="td td-g"></div>
-      </div>
-<pre><code><span class="t-p">$</span> cat current_study.json
+      <section class="s-soft" id="about" aria-labelledby="h-about">
+        <div class="container">
+          <div class="about-grid">
+            <div style="display: flex; justify-content: center">
+              <div
+                class="avatar"
+                role="img"
+                aria-label="Asit Sengar avatar illustration"
+              >
+                &#128064;
+              </div>
+            </div>
+            <div>
+              <h2 id="h-about">
+                Still learning. But that&#8217;s kind of the point.
+              </h2>
+              <p class="lead">
+                I study Computer Science and spend most of my time on two
+                things: DSA and machine learning. Lately I&#8217;ve been getting
+                into computer vision &#8212; there&#8217;s something genuinely
+                cool about writing code that can look at an image and understand
+                what&#8217;s in it.
+              </p>
+              <p class="lead" style="margin-top: var(--sp-md)">
+                I&#8217;m not going to pretend I have everything figured out. I
+                have gaps, I look things up constantly, and half my code
+                doesn&#8217;t work the first time. But I show up every day and
+                that&#8217;s what matters to me right now.
+              </p>
+              <div class="stats" aria-label="Current focus areas">
+                <div class="stat">
+                  <div class="stat-n">DSA</div>
+                  <div class="stat-l">daily grind</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-n">ML</div>
+                  <div class="stat-l">learning</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-n">CV</div>
+                  <div class="stat-l">my goal</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-n">OSS</div>
+                  <div class="stat-l">exploring</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="div" aria-hidden="true" />
+
+      <section class="s-white" aria-labelledby="h-stack">
+        <div class="container">
+          <h2 id="h-stack">What I&#8217;m currently working through.</h2>
+          <div
+            class="terminal"
+            aria-label="Current learning focus displayed as JSON code"
+          >
+            <div class="term-bar" aria-hidden="true">
+              <div class="td td-r"></div>
+              <div class="td td-a"></div>
+              <div class="td td-g"></div>
+            </div>
+            <pre><code><span class="t-p">$</span> cat current_study.json
 
 {
   <span class="t-s">"dsa"</span>:    [<span class="t-s">"Sliding Window"</span>, <span class="t-s">"Two Pointers"</span>, <span class="t-s">"Recursion Backtracking"</span>, <span class="t-s">"Maths"</span>, <span class="t-s">"Sorting"</span>],
@@ -215,258 +1134,633 @@ hr.div{max-width:1200px;margin:0 auto;border:none;border-top:1px solid var(--c-h
   <span class="t-s">"langs"</span>:  [<span class="t-s">"Python"</span>, <span class="t-s">"C++"</span>, <span class="t-s">"Java"</span>],
   <span class="t-s">"goal"</span>:   <span class="t-s">"Computer Vision Engineer"</span>
 }</code></pre>
-    </div>
-  </div>
-</section>
+          </div>
+        </div>
+      </section>
 
-<section class="s-soft" id="skills" aria-labelledby="h-skills">
-  <div class="container">
-    <h2 id="h-skills">Things I know, things I&#8217;m learning.</h2>
-    <p class="lead">From writing optimised algorithms to training neural networks &#8212; always learning, always building.</p>
-    <div class="sk-grid">
-      <article class="sk-card"><div class="sk-icon" aria-hidden="true">&#128301;</div><h3 class="sk-name">Data Structures &amp; Algorithms</h3><p class="sk-desc">I do LeetCode most days. Trees, graphs, and DP are where I spend the most time. Still getting wrecked by some hard problems but that&#8217;s fine.</p><div class="tags" aria-label="Arrays Trees Graphs DP Greedy"><span class="tag">Arrays</span><span class="tag">Trees</span><span class="tag">Graphs</span><span class="tag">DP</span><span class="tag">Greedy</span></div></article>
-      <article class="sk-card"><div class="sk-icon" aria-hidden="true">&#129302;</div><h3 class="sk-name">Machine Learning</h3><p class="sk-desc">Working through Andrew Ng&#8217;s course and building stuff with PyTorch. Still hitting walls but understanding more each week.</p><div class="tags" aria-label="PyTorch scikit-learn NumPy Pandas"><span class="tag">PyTorch</span><span class="tag">scikit-learn</span><span class="tag">NumPy</span><span class="tag">Pandas</span></div></article>
-      <article class="sk-card"><div class="sk-icon" aria-hidden="true">&#128064;</div><h3 class="sk-name">Computer Vision</h3><p class="sk-desc">This is where I want to go. Started with OpenCV basics, now experimenting with CNNs and YOLO. A lot of this is still new to me.</p><div class="tags" aria-label="OpenCV PyTorch CNN YOLO"><span class="tag">OpenCV</span><span class="tag">CNN</span><span class="tag">YOLO</span><span class="tag">PyTorch</span></div></article>
-      <article class="sk-card"><div class="sk-icon" aria-hidden="true">&#128013;</div><h3 class="sk-name">Python</h3><p class="sk-desc">My main language. Use it for everything &#8212; ML experiments, scripting, small Flask apps. Comfortable here.</p><div class="tags" aria-label="Python Flask NumPy Matplotlib"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span></div></article>
-      <article class="sk-card"><div class="sk-icon" aria-hidden="true">&#9889;</div><h3 class="sk-name">C++</h3><p class="sk-desc">Use this for competitive programming. The STL makes contest problems a lot more manageable once you get used to it.</p><div class="tags" aria-label="C++ STL Competitive Programming"><span class="tag">C++</span><span class="tag">STL</span><span class="tag">Competitive Prog.</span></div></article>
-      <article class="sk-card"><div class="sk-icon" aria-hidden="true">&#128200;</div><h3 class="sk-name">Math for ML</h3><p class="sk-desc">The stuff you realise you need to understand once models stop just &#8216;magically working&#8217;. Revisiting it properly now.</p><div class="tags" aria-label="Linear Algebra Probability Calculus Statistics"><span class="tag">Lin. Algebra</span><span class="tag">Probability</span><span class="tag">Calculus</span><span class="tag">Statistics</span></div></article>
-    </div>
-  </div>
-</section>
+      <section class="s-soft" id="skills" aria-labelledby="h-skills">
+        <div class="container">
+          <h2 id="h-skills">Things I know, things I&#8217;m learning.</h2>
+          <p class="lead">
+            From writing optimised algorithms to training neural networks
+            &#8212; always learning, always building.
+          </p>
+          <div class="sk-grid">
+            <article class="sk-card">
+              <div class="sk-icon" aria-hidden="true">&#128301;</div>
+              <h3 class="sk-name">Data Structures &amp; Algorithms</h3>
+              <p class="sk-desc">
+                I do LeetCode most days. Trees, graphs, and DP are where I spend
+                the most time. Still getting wrecked by some hard problems but
+                that&#8217;s fine.
+              </p>
+              <div class="tags" aria-label="Arrays Trees Graphs DP Greedy">
+                <span class="tag">Arrays</span><span class="tag">Trees</span
+                ><span class="tag">Graphs</span><span class="tag">DP</span
+                ><span class="tag">Greedy</span>
+              </div>
+            </article>
+            <article class="sk-card">
+              <div class="sk-icon" aria-hidden="true">&#129302;</div>
+              <h3 class="sk-name">Machine Learning</h3>
+              <p class="sk-desc">
+                Working through Andrew Ng&#8217;s course and building stuff with
+                PyTorch. Still hitting walls but understanding more each week.
+              </p>
+              <div class="tags" aria-label="PyTorch scikit-learn NumPy Pandas">
+                <span class="tag">PyTorch</span
+                ><span class="tag">scikit-learn</span
+                ><span class="tag">NumPy</span><span class="tag">Pandas</span>
+              </div>
+            </article>
+            <article class="sk-card">
+              <div class="sk-icon" aria-hidden="true">&#128064;</div>
+              <h3 class="sk-name">Computer Vision</h3>
+              <p class="sk-desc">
+                This is where I want to go. Started with OpenCV basics, now
+                experimenting with CNNs and YOLO. A lot of this is still new to
+                me.
+              </p>
+              <div class="tags" aria-label="OpenCV PyTorch CNN YOLO">
+                <span class="tag">OpenCV</span><span class="tag">CNN</span
+                ><span class="tag">YOLO</span><span class="tag">PyTorch</span>
+              </div>
+            </article>
+            <article class="sk-card">
+              <div class="sk-icon" aria-hidden="true">&#128013;</div>
+              <h3 class="sk-name">Python</h3>
+              <p class="sk-desc">
+                My main language. Use it for everything &#8212; ML experiments,
+                scripting, small Flask apps. Comfortable here.
+              </p>
+              <div class="tags" aria-label="Python Flask NumPy Matplotlib">
+                <span class="tag">Python</span><span class="tag">Flask</span
+                ><span class="tag">NumPy</span
+                ><span class="tag">Matplotlib</span>
+              </div>
+            </article>
+            <article class="sk-card">
+              <div class="sk-icon" aria-hidden="true">&#9889;</div>
+              <h3 class="sk-name">C++</h3>
+              <p class="sk-desc">
+                Use this for competitive programming. The STL makes contest
+                problems a lot more manageable once you get used to it.
+              </p>
+              <div class="tags" aria-label="C++ STL Competitive Programming">
+                <span class="tag">C++</span><span class="tag">STL</span
+                ><span class="tag">Competitive Prog.</span>
+              </div>
+            </article>
+            <article class="sk-card">
+              <div class="sk-icon" aria-hidden="true">&#128200;</div>
+              <h3 class="sk-name">Math for ML</h3>
+              <p class="sk-desc">
+                The stuff you realise you need to understand once models stop
+                just &#8216;magically working&#8217;. Revisiting it properly
+                now.
+              </p>
+              <div
+                class="tags"
+                aria-label="Linear Algebra Probability Calculus Statistics"
+              >
+                <span class="tag">Lin. Algebra</span
+                ><span class="tag">Probability</span
+                ><span class="tag">Calculus</span
+                ><span class="tag">Statistics</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-<section class="s-white" id="projects" aria-labelledby="h-projects">
-  <div class="container">
-    <h2 id="h-projects">Projects I&#8217;ve worked on.</h2>
-    <p class="lead">Some of these are polished, some are messy experiments. All of them taught me something.</p>
-    <div class="pr-grid">
+      <section class="s-white" id="projects" aria-labelledby="h-projects">
+        <div class="container">
+          <h2 id="h-projects">Projects I&#8217;ve worked on.</h2>
+          <p class="lead">
+            Some of these are polished, some are messy experiments. All of them
+            taught me something.
+          </p>
+          <div class="pr-grid">
+            <article class="pr-card">
+              <div class="pr-head ph-preview" aria-hidden="true">&#128064;</div>
+              <div class="pr-body">
+                <p class="pr-status">computer vision &#183; python</p>
+                <h3 class="pr-name">Real-Time Object Detector</h3>
+                <p class="pr-desc">
+                  Got YOLOv8 running on webcam input with OpenCV. Mostly
+                  followed tutorials at first but then started tinkering with
+                  confidence thresholds and custom classes.
+                </p>
+                <div class="tags">
+                  <span class="tag">Python</span><span class="tag">YOLOv8</span
+                  ><span class="tag">OpenCV</span>
+                </div>
+              </div>
+              <div class="pr-foot">
+                <a
+                  href="https://github.com/Asit-Sengar"
+                  class="pr-link"
+                  aria-label="View on GitHub"
+                  >GitHub &#8594;</a
+                >
+                <span class="tag">Computer Vision</span>
+              </div>
+            </article>
 
-      <article class="pr-card">
-        <div class="pr-head ph-preview" aria-hidden="true">&#128064;</div>
-        <div class="pr-body">
-          <p class="pr-status">computer vision &#183; python</p>
-          <h3 class="pr-name">Real-Time Object Detector</h3>
-          <p class="pr-desc">Got YOLOv8 running on webcam input with OpenCV. Mostly followed tutorials at first but then started tinkering with confidence thresholds and custom classes.</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">YOLOv8</span><span class="tag">OpenCV</span></div>
-        </div>
-        <div class="pr-foot">
-          <a href="https://github.com/Asit-Sengar" class="pr-link" aria-label="View on GitHub">GitHub &#8594;</a>
-          <span class="tag">Computer Vision</span>
-        </div>
-      </article>
+            <article class="pr-card">
+              <div class="pr-head ph-develop" aria-hidden="true">&#128301;</div>
+              <div class="pr-body">
+                <p class="pr-status">dsa &#183; visualiser</p>
+                <h3 class="pr-name">Algorithm Visualiser</h3>
+                <p class="pr-desc">
+                  Built this to actually understand what was happening inside
+                  the algorithms I was coding. Pygame for the visuals.
+                  Surprisingly useful to watch Dijkstra run step-by-step.
+                </p>
+                <div class="tags">
+                  <span class="tag">Python</span><span class="tag">Pygame</span
+                  ><span class="tag">Graphs</span>
+                </div>
+              </div>
+              <div class="pr-foot">
+                <a
+                  href="https://leetcode.com/u/Asit_Sengar/"
+                  class="pr-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View LeetCode profile, opens in new tab"
+                  >LeetCode &#8594;</a
+                >
+                <span class="tag">DSA</span>
+              </div>
+            </article>
 
-      <article class="pr-card">
-        <div class="pr-head ph-develop" aria-hidden="true">&#128301;</div>
-        <div class="pr-body">
-          <p class="pr-status">dsa &#183; visualiser</p>
-          <h3 class="pr-name">Algorithm Visualiser</h3>
-          <p class="pr-desc">Built this to actually understand what was happening inside the algorithms I was coding. Pygame for the visuals. Surprisingly useful to watch Dijkstra run step-by-step.</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Pygame</span><span class="tag">Graphs</span></div>
-        </div>
-        <div class="pr-foot">
-          <a href="https://leetcode.com/u/Asit_Sengar/" class="pr-link" target="_blank" rel="noopener noreferrer" aria-label="View LeetCode profile, opens in new tab">LeetCode &#8594;</a>
-          <span class="tag">DSA</span>
-        </div>
-      </article>
+            <article class="pr-card">
+              <div class="pr-head ph-ship" aria-hidden="true">&#129302;</div>
+              <div class="pr-body">
+                <p class="pr-status">machine learning &#183; classifier</p>
+                <h3 class="pr-name">Handwritten Digit Recogniser</h3>
+                <p class="pr-desc">
+                  Classic first CNN project &#8212; trained on MNIST, wrapped in
+                  a simple Flask page where you draw a digit and it tries to
+                  guess. Works most of the time.
+                </p>
+                <div class="tags">
+                  <span class="tag">PyTorch</span><span class="tag">CNN</span
+                  ><span class="tag">Flask</span>
+                </div>
+              </div>
+              <div class="pr-foot">
+                <a
+                  href="https://github.com/Asit-Sengar"
+                  class="pr-link"
+                  aria-label="View on GitHub"
+                  >GitHub &#8594;</a
+                >
+                <span class="tag">ML</span>
+              </div>
+            </article>
 
-      <article class="pr-card">
-        <div class="pr-head ph-ship" aria-hidden="true">&#129302;</div>
-        <div class="pr-body">
-          <p class="pr-status">machine learning &#183; classifier</p>
-          <h3 class="pr-name">Handwritten Digit Recogniser</h3>
-          <p class="pr-desc">Classic first CNN project &#8212; trained on MNIST, wrapped in a simple Flask page where you draw a digit and it tries to guess. Works most of the time.</p>
-          <div class="tags"><span class="tag">PyTorch</span><span class="tag">CNN</span><span class="tag">Flask</span></div>
-        </div>
-        <div class="pr-foot">
-          <a href="https://github.com/Asit-Sengar" class="pr-link" aria-label="View on GitHub">GitHub &#8594;</a>
-          <span class="tag">ML</span>
-        </div>
-      </article>
+            <article class="pr-card">
+              <div class="pr-head ph-dark" aria-hidden="true">&#128200;</div>
+              <div class="pr-body">
+                <p class="pr-status">data science &#183; analysis</p>
+                <h3 class="pr-name">Data Analysis Notebook</h3>
+                <p class="pr-desc">
+                  Picked a Kaggle dataset, cleaned it up, explored it, then
+                  built a simple regression model. More about learning the
+                  workflow than getting a great score.
+                </p>
+                <div class="tags">
+                  <span class="tag">Python</span><span class="tag">Pandas</span
+                  ><span class="tag">scikit-learn</span>
+                </div>
+              </div>
+              <div class="pr-foot">
+                <a
+                  href="https://github.com/Asit-Sengar"
+                  class="pr-link"
+                  aria-label="View on GitHub"
+                  >GitHub &#8594;</a
+                >
+                <span class="tag">Data Science</span>
+              </div>
+            </article>
 
-      <article class="pr-card">
-        <div class="pr-head ph-dark" aria-hidden="true">&#128200;</div>
-        <div class="pr-body">
-          <p class="pr-status">data science &#183; analysis</p>
-          <h3 class="pr-name">Data Analysis Notebook</h3>
-          <p class="pr-desc">Picked a Kaggle dataset, cleaned it up, explored it, then built a simple regression model. More about learning the workflow than getting a great score.</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">scikit-learn</span></div>
-        </div>
-        <div class="pr-foot">
-          <a href="https://github.com/Asit-Sengar" class="pr-link" aria-label="View on GitHub">GitHub &#8594;</a>
-          <span class="tag">Data Science</span>
-        </div>
-      </article>
+            <article class="pr-card">
+              <div class="pr-head ph-soft" aria-hidden="true">&#128681;</div>
+              <div class="pr-body">
+                <p class="pr-status">competitive programming</p>
+                <h3 class="pr-name">CP Solutions Archive</h3>
+                <p class="pr-desc">
+                  Where I keep my LeetCode and Codeforces solutions. Not
+                  perfectly organised but it&#8217;s useful to look back at
+                  older approaches when a problem looks familiar.
+                </p>
+                <div class="tags">
+                  <span class="tag">C++</span><span class="tag">Python</span
+                  ><span class="tag">LeetCode</span>
+                </div>
+              </div>
+              <div class="pr-foot">
+                <a
+                  href="https://github.com/Asit-Sengar"
+                  class="pr-link"
+                  aria-label="View on GitHub"
+                  >GitHub &#8594;</a
+                >
+                <span class="tag">DSA</span>
+              </div>
+            </article>
 
-      <article class="pr-card">
-        <div class="pr-head ph-soft" aria-hidden="true">&#128681;</div>
-        <div class="pr-body">
-          <p class="pr-status">competitive programming</p>
-          <h3 class="pr-name">CP Solutions Archive</h3>
-          <p class="pr-desc">Where I keep my LeetCode and Codeforces solutions. Not perfectly organised but it&#8217;s useful to look back at older approaches when a problem looks familiar.</p>
-          <div class="tags"><span class="tag">C++</span><span class="tag">Python</span><span class="tag">LeetCode</span></div>
+            <article class="pr-card">
+              <div class="pr-head ph-mix" aria-hidden="true">&#127760;</div>
+              <div class="pr-body">
+                <p class="pr-status">computer vision &#183; opencv</p>
+                <h3 class="pr-name">Face &amp; Emotion Detector</h3>
+                <p class="pr-desc">
+                  Tried to classify emotions from face images. Detection works
+                  well; the emotion part is hit or miss honestly. Good learning
+                  experience though.
+                </p>
+                <div class="tags">
+                  <span class="tag">OpenCV</span><span class="tag">PyTorch</span
+                  ><span class="tag">CNN</span>
+                </div>
+              </div>
+              <div class="pr-foot">
+                <a
+                  href="https://github.com/Asit-Sengar"
+                  class="pr-link"
+                  aria-label="View on GitHub"
+                  >GitHub &#8594;</a
+                >
+                <span class="tag">Computer Vision</span>
+              </div>
+            </article>
+          </div>
         </div>
-        <div class="pr-foot">
-          <a href="https://github.com/Asit-Sengar" class="pr-link" aria-label="View on GitHub">GitHub &#8594;</a>
-          <span class="tag">DSA</span>
-        </div>
-      </article>
+      </section>
 
-      <article class="pr-card">
-        <div class="pr-head ph-mix" aria-hidden="true">&#127760;</div>
-        <div class="pr-body">
-          <p class="pr-status">computer vision &#183; opencv</p>
-          <h3 class="pr-name">Face &amp; Emotion Detector</h3>
-          <p class="pr-desc">Tried to classify emotions from face images. Detection works well; the emotion part is hit or miss honestly. Good learning experience though.</p>
-          <div class="tags"><span class="tag">OpenCV</span><span class="tag">PyTorch</span><span class="tag">CNN</span></div>
-        </div>
-        <div class="pr-foot">
-          <a href="https://github.com/Asit-Sengar" class="pr-link" aria-label="View on GitHub">GitHub &#8594;</a>
-          <span class="tag">Computer Vision</span>
-        </div>
-      </article>
+      <section
+        class="s-dark"
+        id="education"
+        aria-labelledby="h-edu"
+        style="position: relative; overflow: hidden"
+      >
+        <div class="ct-mesh" aria-hidden="true"></div>
+        <div class="container" style="position: relative; z-index: 1">
+          <h2 id="h-edu">Where I&#8217;m at.</h2>
+          <div class="edu-list">
+            <div class="edu-item">
+              <div>
+                <div class="edu-co">Computer Science</div>
+                <div class="edu-per">current</div>
+              </div>
+              <div>
+                <h3 class="edu-title">B.Tech in Computer Science</h3>
+                <p class="edu-body">
+                  Doing my B.Tech in CS. The coursework covers the usual &#8212;
+                  DS, algorithms, OS, DBMS. Outside of class I spend most of my
+                  time on ML and competitive programming.
+                </p>
+                <div class="edu-tags">
+                  <span class="etag">DSA</span
+                  ><span class="etag">Machine Learning</span
+                  ><span class="etag">Computer Vision</span
+                  ><span class="etag">OS</span><span class="etag">DBMS</span>
+                </div>
+              </div>
+            </div>
 
-    </div>
-  </div>
-</section>
+            <div class="edu-item">
+              <div>
+                <div class="edu-co">Self-Study</div>
+                <div class="edu-per">ongoing</div>
+              </div>
+              <div>
+                <h3 class="edu-title">Machine Learning &amp; Deep Learning</h3>
+                <p class="edu-body">
+                  Going through Andrew Ng&#8217;s ML course on Coursera and the
+                  fast.ai material. I try to build something small with every
+                  topic I finish rather than just watching.
+                </p>
+                <div class="edu-tags">
+                  <span class="etag">Coursera</span
+                  ><span class="etag">fast.ai</span
+                  ><span class="etag">PyTorch</span
+                  ><span class="etag">CNNs</span>
+                </div>
+              </div>
+            </div>
 
-<section class="s-dark" id="education" aria-labelledby="h-edu" style="position:relative;overflow:hidden">
-  <div class="ct-mesh" aria-hidden="true"></div>
-  <div class="container" style="position:relative;z-index:1">
-    <h2 id="h-edu">Where I&#8217;m at.</h2>
-    <div class="edu-list">
-
-      <div class="edu-item">
-        <div><div class="edu-co">Computer Science</div><div class="edu-per">current</div></div>
-        <div>
-          <h3 class="edu-title">B.Tech in Computer Science</h3>
-          <p class="edu-body">Doing my B.Tech in CS. The coursework covers the usual &#8212; DS, algorithms, OS, DBMS. Outside of class I spend most of my time on ML and competitive programming.</p>
-          <div class="edu-tags"><span class="etag">DSA</span><span class="etag">Machine Learning</span><span class="etag">Computer Vision</span><span class="etag">OS</span><span class="etag">DBMS</span></div>
+            <div class="edu-item">
+              <div>
+                <div class="edu-co">Competitive Programming</div>
+                <div class="edu-per">ongoing</div>
+              </div>
+              <div>
+                <h3 class="edu-title">DSA Practice &amp; CP</h3>
+                <p class="edu-body">
+                  Doing LeetCode daily, Codeforces when I have time. Currently
+                  focused on graphs and DP. Segment trees are next on the list.
+                </p>
+                <div class="edu-tags">
+                  <span class="etag">LeetCode</span
+                  ><span class="etag">Codeforces</span
+                  ><span class="etag">C++</span><span class="etag">Python</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <section class="s-soft" aria-labelledby="h-tools">
+        <div class="container">
+          <h2 id="h-tools">My toolkit.</h2>
+          <div class="tl-grid">
+            <div class="tl-card">
+              <span class="tl-icon" aria-hidden="true">&#128013;</span>
+              <div>
+                <div class="tl-name">Python</div>
+                <div class="tl-lvl">primary</div>
+              </div>
+            </div>
+            <div class="tl-card">
+              <span class="tl-icon" aria-hidden="true">&#9889;</span>
+              <div>
+                <div class="tl-name">C++</div>
+                <div class="tl-lvl">competitive</div>
+              </div>
+            </div>
+            <div class="tl-card">
+              <span class="tl-icon" aria-hidden="true">&#128064;</span>
+              <div>
+                <div class="tl-name">OpenCV</div>
+                <div class="tl-lvl">learning</div>
+              </div>
+            </div>
+            <div class="tl-card">
+              <span class="tl-icon" aria-hidden="true">&#128293;</span>
+              <div>
+                <div class="tl-name">PyTorch</div>
+                <div class="tl-lvl">learning</div>
+              </div>
+            </div>
+            <div class="tl-card">
+              <span class="tl-icon" aria-hidden="true">&#128202;</span>
+              <div>
+                <div class="tl-name">NumPy/Pandas</div>
+                <div class="tl-lvl">proficient</div>
+              </div>
+            </div>
+            <div class="tl-card">
+              <span class="tl-icon" aria-hidden="true">&#128300;</span>
+              <div>
+                <div class="tl-name">scikit-learn</div>
+                <div class="tl-lvl">proficient</div>
+              </div>
+            </div>
+            <div class="tl-card">
+              <span class="tl-icon" aria-hidden="true">&#128051;</span>
+              <div>
+                <div class="tl-name">Git / GitHub</div>
+                <div class="tl-lvl">daily use</div>
+              </div>
+            </div>
+            <div class="tl-card">
+              <span class="tl-icon" aria-hidden="true">&#128218;</span>
+              <div>
+                <div class="tl-name">Jupyter</div>
+                <div class="tl-lvl">daily use</div>
+              </div>
+            </div>
+            <div class="tl-card">
+              <span class="tl-icon" aria-hidden="true">&#9728;&#65039;</span>
+              <div>
+                <div class="tl-name">Linux</div>
+                <div class="tl-lvl">comfortable</div>
+              </div>
+            </div>
+            <div class="tl-card">
+              <span class="tl-icon" aria-hidden="true">&#128301;</span>
+              <div>
+                <div class="tl-name">YOLO</div>
+                <div class="tl-lvl">learning</div>
+              </div>
+            </div>
+            <div class="tl-card">
+              <span class="tl-icon" aria-hidden="true">&#127919;</span>
+              <div>
+                <div class="tl-name">LeetCode</div>
+                <div class="tl-lvl">daily practice</div>
+              </div>
+            </div>
+            <div class="tl-card">
+              <span class="tl-icon" aria-hidden="true">&#128451;&#65039;</span>
+              <div>
+                <div class="tl-name">VS Code</div>
+                <div class="tl-lvl">primary IDE</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="s-dark ct-section"
+        id="contact"
+        aria-labelledby="h-contact"
+      >
+        <div class="ct-mesh" aria-hidden="true"></div>
+        <div class="container">
+          <div class="ct-inner">
+            <h2 id="h-contact">Say hi.</h2>
+            <p class="lead" style="text-align: center; max-width: 460px">
+              If you want to collaborate on something, or if you&#8217;re
+              working on an interesting project and need an extra pair of hands,
+              reach out. Also happy to just talk CS.
+            </p>
+            <div class="ct-links">
+              <a
+                href="https://github.com/Asit-Sengar"
+                class="ct-link ct-gh"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View GitHub profile, opens in new tab"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  />
+                </svg>
+                github.com/Asit-Sengar
+              </a>
+              <a
+                href="https://www.linkedin.com/in/asit-sengar-743595272/"
+                class="ct-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn profile, opens in new tab"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+                LinkedIn
+              </a>
+              <a
+                href="mailto:asitsengar28@gmail.com"
+                class="ct-link"
+                aria-label="Send email to asit"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <rect
+                    x="2"
+                    y="4"
+                    width="12"
+                    height="9"
+                    rx="1.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M2 6l6 4 6-4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                </svg>
+                Email me
+              </a>
+              <a
+                href="https://leetcode.com/u/Asit_Sengar/"
+                class="ct-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LeetCode profile, opens in new tab"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.274 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"
+                  />
+                </svg>
+                LeetCode
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <div class="foot-i">
+        <p class="foot-copy">Asit Sengar &#183; Built with HTML &amp; CSS.</p>
+        <ul class="foot-links" role="list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li>
+            <a
+              href="https://github.com/Asit-Sengar"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/asit-sengar-743595272/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://leetcode.com/u/Asit_Sengar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LeetCode</a
+            >
+          </li>
+        </ul>
       </div>
+    </footer>
 
-      <div class="edu-item">
-        <div><div class="edu-co">Self-Study</div><div class="edu-per">ongoing</div></div>
-        <div>
-          <h3 class="edu-title">Machine Learning &amp; Deep Learning</h3>
-          <p class="edu-body">Going through Andrew Ng&#8217;s ML course on Coursera and the fast.ai material. I try to build something small with every topic I finish rather than just watching.</p>
-          <div class="edu-tags"><span class="etag">Coursera</span><span class="etag">fast.ai</span><span class="etag">PyTorch</span><span class="etag">CNNs</span></div>
-        </div>
-      </div>
-
-      <div class="edu-item">
-        <div><div class="edu-co">Competitive Programming</div><div class="edu-per">ongoing</div></div>
-        <div>
-          <h3 class="edu-title">DSA Practice &amp; CP</h3>
-          <p class="edu-body">Doing LeetCode daily, Codeforces when I have time. Currently focused on graphs and DP. Segment trees are next on the list.</p>
-          <div class="edu-tags"><span class="etag">LeetCode</span><span class="etag">Codeforces</span><span class="etag">C++</span><span class="etag">Python</span></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="s-soft" aria-labelledby="h-tools">
-  <div class="container">
-    <h2 id="h-tools">My toolkit.</h2>
-    <div class="tl-grid">
-      <div class="tl-card"><span class="tl-icon" aria-hidden="true">&#128013;</span><div><div class="tl-name">Python</div><div class="tl-lvl">primary</div></div></div>
-      <div class="tl-card"><span class="tl-icon" aria-hidden="true">&#9889;</span><div><div class="tl-name">C++</div><div class="tl-lvl">competitive</div></div></div>
-      <div class="tl-card"><span class="tl-icon" aria-hidden="true">&#128064;</span><div><div class="tl-name">OpenCV</div><div class="tl-lvl">learning</div></div></div>
-      <div class="tl-card"><span class="tl-icon" aria-hidden="true">&#128293;</span><div><div class="tl-name">PyTorch</div><div class="tl-lvl">learning</div></div></div>
-      <div class="tl-card"><span class="tl-icon" aria-hidden="true">&#128202;</span><div><div class="tl-name">NumPy/Pandas</div><div class="tl-lvl">proficient</div></div></div>
-      <div class="tl-card"><span class="tl-icon" aria-hidden="true">&#128300;</span><div><div class="tl-name">scikit-learn</div><div class="tl-lvl">proficient</div></div></div>
-      <div class="tl-card"><span class="tl-icon" aria-hidden="true">&#128051;</span><div><div class="tl-name">Git / GitHub</div><div class="tl-lvl">daily use</div></div></div>
-      <div class="tl-card"><span class="tl-icon" aria-hidden="true">&#128218;</span><div><div class="tl-name">Jupyter</div><div class="tl-lvl">daily use</div></div></div>
-      <div class="tl-card"><span class="tl-icon" aria-hidden="true">&#9728;&#65039;</span><div><div class="tl-name">Linux</div><div class="tl-lvl">comfortable</div></div></div>
-      <div class="tl-card"><span class="tl-icon" aria-hidden="true">&#128301;</span><div><div class="tl-name">YOLO</div><div class="tl-lvl">learning</div></div></div>
-      <div class="tl-card"><span class="tl-icon" aria-hidden="true">&#127919;</span><div><div class="tl-name">LeetCode</div><div class="tl-lvl">daily practice</div></div></div>
-      <div class="tl-card"><span class="tl-icon" aria-hidden="true">&#128451;&#65039;</span><div><div class="tl-name">VS Code</div><div class="tl-lvl">primary IDE</div></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="s-dark ct-section" id="contact" aria-labelledby="h-contact">
-  <div class="ct-mesh" aria-hidden="true"></div>
-  <div class="container">
-    <div class="ct-inner">
-      <h2 id="h-contact">Say hi.</h2>
-      <p class="lead" style="text-align:center;max-width:460px">If you want to collaborate on something, or if you&#8217;re working on an interesting project and need an extra pair of hands, reach out. Also happy to just talk CS.</p>
-      <div class="ct-links">
-        <a href="https://github.com/Asit-Sengar" class="ct-link ct-gh" target="_blank" rel="noopener noreferrer" aria-label="View GitHub profile, opens in new tab">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          github.com/Asit-Sengar
-        </a>
-        <a href="https://www.linkedin.com/in/asit-sengar-743595272/" class="ct-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile, opens in new tab">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
-        </a>
-        <a href="mailto:asitsengar28@gmail.com" class="ct-link" aria-label="Send email to asit">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2" y="4" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M2 6l6 4 6-4" stroke="currentColor" stroke-width="1.5"/></svg>
-          Email me
-        </a>
-        <a href="https://leetcode.com/u/Asit_Sengar/" class="ct-link" target="_blank" rel="noopener noreferrer" aria-label="LeetCode profile, opens in new tab">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.274 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
-          LeetCode
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer role="contentinfo">
-  <div class="foot-i">
-    <p class="foot-copy">Asit Sengar &#183; Built with HTML &amp; CSS.</p>
-    <ul class="foot-links" role="list">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="https://github.com/Asit-Sengar" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/asit-sengar-743595272/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-      <li><a href="https://leetcode.com/u/Asit_Sengar/" target="_blank" rel="noopener noreferrer">LeetCode</a></li>
-    </ul>
-  </div>
-</footer>
-
-<script>
-(function(){
-  var hbg=document.getElementById('nav-hbg');
-  hbg.addEventListener('click',function(){
-    var exp=hbg.getAttribute('aria-expanded')==='true';
-    hbg.setAttribute('aria-expanded',String(!exp));
-  });
-  if(!window.matchMedia('(prefers-reduced-motion:reduce)').matches){
-    var io=new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){
-          e.target.style.opacity='1';
-          e.target.style.transform='translateY(0)';
-          io.unobserve(e.target);
-        }
-      });
-    },{threshold:0.08});
-    document.querySelectorAll('.sk-card,.pr-card,.tl-card,.stat').forEach(function(el){
-      el.style.opacity='0';
-      el.style.transform='translateY(12px)';
-      el.style.transition='opacity 0.4s ease,transform 0.4s ease';
-      io.observe(el);
-    });
-    var navLinks=document.querySelectorAll('.nav-links a');
-    var sections=document.querySelectorAll('section[id]');
-    var ao=new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){
-          navLinks.forEach(function(l){
-            l.removeAttribute('aria-current');
-            if(l.getAttribute('href')==='#'+e.target.id) l.setAttribute('aria-current','page');
+    <script>
+      (function () {
+        var hbg = document.getElementById("nav-hbg");
+        hbg.addEventListener("click", function () {
+          var exp = hbg.getAttribute("aria-expanded") === "true";
+          hbg.setAttribute("aria-expanded", String(!exp));
+        });
+        if (!window.matchMedia("(prefers-reduced-motion:reduce)").matches) {
+          var io = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                  e.target.style.opacity = "1";
+                  e.target.style.transform = "translateY(0)";
+                  io.unobserve(e.target);
+                }
+              });
+            },
+            { threshold: 0.08 },
+          );
+          document
+            .querySelectorAll(".sk-card,.pr-card,.tl-card,.stat")
+            .forEach(function (el) {
+              el.style.opacity = "0";
+              el.style.transform = "translateY(12px)";
+              el.style.transition = "opacity 0.4s ease,transform 0.4s ease";
+              io.observe(el);
+            });
+          var navLinks = document.querySelectorAll(".nav-links a");
+          var sections = document.querySelectorAll("section[id]");
+          var ao = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                  navLinks.forEach(function (l) {
+                    l.removeAttribute("aria-current");
+                    if (l.getAttribute("href") === "#" + e.target.id)
+                      l.setAttribute("aria-current", "page");
+                  });
+                }
+              });
+            },
+            { rootMargin: "-50% 0px -50% 0px" },
+          );
+          sections.forEach(function (s) {
+            ao.observe(s);
           });
         }
-      });
-    },{rootMargin:'-50% 0px -50% 0px'});
-    sections.forEach(function(s){ao.observe(s);});
-  }
-})();
-</script>
-</body>
+      })();
+    </script>
+  </body>
 </html>
-
