@@ -4,7 +4,7 @@ Personal portfolio website showcasing my skills, projects, education, and experi
 
 ## 🌐 Live Portfolio
 
-[Visit my Portfolio](https://asit-sengar.github.io/my_portfolio/)
+[Visit my Portfolio](https://asit-sengar.github.io/Asit-s-Portfolio/)
 
 ## 🛠️ Built With
 
